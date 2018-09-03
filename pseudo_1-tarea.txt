@@ -1,0 +1,34 @@
+INICIO
+    comienzo:
+    nombre = "", promedio= 0, notas[3], otra="", N=3
+    nombre = ESCRIBIR("ingrese el nombre del estudiante")
+    PARA(x=0;x<=2;x++) entonces
+        ESCRIBIR("INGRESE NOTA")
+        LEER(notas[x])
+        ESCRIBIR ("las notas de "+nombre+" son las siguiente: ")
+        ESCRIBIR(notas[x])
+        promedio = promedio + notas[x]
+      SI (x=2) ENTONCES
+            promedio = promedio/N
+            ESCRIBIR("Hola "+nombre+" el promedio de sus notas es: "+promedio)
+      FIN SI
+					  
+    FIN PARA
+    letra:
+    ESCRIBIR("¿Desea Volver a calcular el promedio de otro alumno? S/N")
+    LEER(otra)
+    SI (otra == "S" o otra == "s")
+        IR A comienzo
+ SINO
+         SI (otra == "N" o otra == "n")
+                ESCRIBIR("Adios")
+            SINO
+                ESCRIBIR("Por favor, ingrese una opción valida")
+                IR A letra
+            FIN SI
+         FIN SI
+ FIN
+					  ------------------------------------------------------------------ 
+
+
+
