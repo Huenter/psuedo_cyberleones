@@ -1,0 +1,31 @@
+DOS_ARREGLOS
+INICIO
+    nombre[5], edad[5], N=5, promedio = 0, mayor = 0, menor = 0, contenedor = 0, contenedor2 = 0
+    ESCRIBIR("En el siguiente programa debera escribir el nombre y edad de 5 personas")
+    PARA(x=0;x<=4;x++) entonces
+        ESCRIBIR("ingrese el nombre de la persona")
+        LEER(nombre[x])
+        ESCRIBIR("ingrese la edad de la persona")
+        LEER(edad[x])
+        promedio = promedio + edad[x]
+        SI (x=4) ENTONCES
+            promedio = promedio/N
+            PARA(y=0;y<=4;y++)
+                mayor = contenedor
+                contenedor = edad[x]
+                SI(contenedor > mayor)
+                    mayor = contenedor
+                FIN SI
+                ESCRIBIR("la edad mayor es" +mayor)
+                menor = contenedor
+                contenedor = edad[x]
+                SI(contenedor < menor)
+                    menor = contenedor
+                FIN SI
+                ESCRIBIR("la edad mayor es" +menor)
+            FIN PARA
+            ESCRIBIR("La edad promedio corresponde a: "+promedio+" años de edad")
+        FIN SI
+
+    FIN PARA
+FIN
